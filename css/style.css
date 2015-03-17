@@ -1,0 +1,19 @@
+#menu {
+    padding: 10px;
+}
+.indexBtn {
+    width: 250px;
+    margin-bottom: 10px;
+}
+#exit {
+    margin-bottom: 0;
+}
+#container {
+    margin-top: 20px;
+}
+.isbn {
+    margin-top: 0px;
+}
+.bookImg {
+    margin-top: 25px;
+}

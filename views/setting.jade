@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    script(type='text/javascript', src="./js/setting.js")
+    .row
+        .col-xs-8.col-xs-offset-2
+            .form-group.isbn
+                label(for='barcodeScanner') 二维码扫描器：
+                select#barcodeScanner.form-control
+                    option(value='') 选择串口
+                label(for='tagScanner') 标签扫描器：
+                select#tagScanner.form-control
+                    option(value='') 选择串口
+                label(for='nfc') 读卡器：                   
+                select#nfc.form-control
+                    option(value='') 选择串口 
+            button#refresh.btn.btn-primary.btn-block(type='button') 刷新
+            button#save.btn.btn-success.btn-block(type='button') 保存
