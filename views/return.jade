@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    script(type='text/javascript', src="./js/return.js")
+
+    .row
+        .col-xs-10.col-xs-offset-1
+            table.table#bookTable
+                thead
+                    tr
+                        th 书名
+                        th 作者
+                        th ISBN
+                        th 出版社
+
+                tbody
+                    
+            h2#info.text-center 请放置需归还的书籍
+            button#reset.btn.btn-danger.btn-block.hidden 重新扫描
+            button#submit.btn.btn-primary.btn-block.hidden 确认归还

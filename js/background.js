@@ -57,7 +57,7 @@ var initSerialport = function(){
                 chrome.serial.send(tagScannerConn.connectionId, sendData, function(sendInfo) {
                     // console.log(sendData);
                 });
-            }, 500);
+            }, 200);
         });
     });
 };
@@ -92,6 +92,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
                     initSerialport();
                 });
             });
-        });    
+        });
     }
 });

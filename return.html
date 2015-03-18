@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script type="text/javascript" src="./js/common/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/common/moment.min.js"></script>
+    <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./layer/layer.min.js"></script>
+    <script type="text/javascript" src="./js/button.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header"><a id="title" href="#" class="navbar-brand"></a></div>
+        <div id="navbar1" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a id="lend" href="#">借书</a></li>
+            <li><a id="return" href="#">还书</a></li>
+            <li><a id="lookup" href="#">详情</a></li>
+            <li><a id="setting" href="#">串口设定</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a id="exit" href="#">退出</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="container" class="container-fluid">
+      <script type="text/javascript" src="./js/return.js"></script>
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+          <table id="bookTable" class="table">
+            <thead>
+              <tr>
+                <th>书名</th>
+                <th>作者</th>
+                <th>ISBN</th>
+                <th>出版社</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <h2 id="info" class="text-center">请放置需归还的书籍</h2>
+          <button id="reset" class="btn btn-danger btn-block hidden">重新扫描</button>
+          <button id="submit" class="btn btn-primary btn-block hidden">确认归还</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

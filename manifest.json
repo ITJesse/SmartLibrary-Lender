@@ -1,6 +1,6 @@
 {
-    "name": "智慧图书馆",
-    "description": "智慧图书馆配套管理系统",
+    "name": "自助借阅平台",
+    "description": "智慧图书馆自助借阅系统",
     "version": "0.1",
     "manifest_version": 2,
     "app": {
@@ -15,12 +15,6 @@
     "permissions": [
         "serial",
         "storage",
-        "https://api.douban.com/*",
-        "http://img1.douban.com/*",
-        "http://img2.douban.com/*",
-        "http://img3.douban.com/*",
-        "http://img4.douban.com/*",
-        "http://img5.douban.com/*",
         "http://127.0.0.1:3000/*"
     ]
 }
