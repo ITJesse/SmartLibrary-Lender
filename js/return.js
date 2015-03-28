@@ -11,7 +11,7 @@ $(document).on('ready', function(){
 
     var getTagInfo = function(tagId){
         $.ajax({
-            url: 'http://127.0.0.1:3000/api/GetTagInfo',
+            url: 'http://42.96.200.228:3001/api/GetTagInfo',
             type: 'get',
             data: 'tagId='+tagId,
             dataType: 'json',
@@ -41,7 +41,7 @@ $(document).on('ready', function(){
             tagId = tagId.substring(0, tagId.length - 1);
             sendData.tagList = tagId;
             $.ajax({
-                url: 'http://127.0.0.1:3000/api/ReturnBook',
+                url: 'http://42.96.200.228:3001/api/ReturnBook',
                 type: 'post',
                 data: sendData,
                 success: function(res){
