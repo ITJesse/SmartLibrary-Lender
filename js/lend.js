@@ -18,7 +18,7 @@ $(document).on('ready', function(){
 
     var getTagInfo = function(tagId){
         $.ajax({
-            url: 'http://42.96.200.228:3001/api/GetTagInfo',
+            url: 'http://library.itjesse.cn/API/Client/GetTagInfo',
             type: 'get',
             data: 'tagId='+tagId,
             dataType: 'json',
@@ -50,7 +50,7 @@ $(document).on('ready', function(){
             tagId = tagId.substring(0, tagId.length - 1);
             sendData.tagList = tagId;
             $.ajax({
-                url: 'http://42.96.200.228:3001/api/LendBook',
+                url: 'http://library.itjesse.cn/API/Client/LendBook',
                 type: 'post',
                 data: sendData,
                 dataType: 'json',

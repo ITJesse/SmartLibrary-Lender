@@ -8,7 +8,7 @@ $(document).on('ready', function(){
             sendData.studentId = value;
         }
         $.ajax({
-            url: 'http://42.96.200.228:3001/api/Lookup',
+            url: 'http://library.itjesse.cn/API/Client/Lookup',
             type: 'get',
             data: sendData,
             dataType: 'json',
