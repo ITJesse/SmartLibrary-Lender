@@ -11,13 +11,13 @@ $(document).on('ready', function(){
 
     var getTagInfo = function(tagId){
         $.ajax({
-            url: 'http://library.itjesse.cn/API/Client/GetTagInfo',
+            url: 'http://192.168.1.204:3000/API/Client/GetTagInfo',
             type: 'get',
             data: 'tagId='+tagId,
             dataType: 'json',
             success: function(res){
                 if(res.error != '-1'){
-                    $('tbody').append('<tr><td>'+res.title+'</td><td>'+res.author+'</td><td>'+res.isbn+'</td><td>'+res.publisher+'</td></tr>');
+                    $('tbody').append('<tr><td>'+res.info.title+'</td><td>'+res.info.author+'</td><td>'+res.info.isbn+'</td><td>'+res.info.publisher+'</td></tr>');
                     $('#reset').removeClass('hidden');
                     $('#submit').removeClass('hidden');
                 }
@@ -41,7 +41,7 @@ $(document).on('ready', function(){
             tagId = tagId.substring(0, tagId.length - 1);
             sendData.tagList = tagId;
             $.ajax({
-                url: 'http://library.itjesse.cn/API/Client/ReturnBook',
+                url: 'http://192.168.1.204:3000/API/Client/ReturnBook',
                 type: 'post',
                 data: sendData,
                 success: function(res){

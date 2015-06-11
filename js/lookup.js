@@ -8,7 +8,7 @@ $(document).on('ready', function(){
             sendData.studentId = value;
         }
         $.ajax({
-            url: 'http://library.itjesse.cn/API/Client/Lookup',
+            url: 'http://192.168.1.204:3000/API/Client/Lookup',
             type: 'get',
             data: sendData,
             dataType: 'json',
@@ -27,8 +27,8 @@ $(document).on('ready', function(){
                 }
                 else{
                     $('#reset').click();
-                    for(var i in res){
-                        $('tbody').append('<tr><td>'+res[i].title+'</td><td>'+moment(res[i].lendTime).format('YYYY-MM-DD')+'</td><td>'+moment(res[i].lendTime).add(20, 'day').format('YYYY-MM-DD')+'</td></tr>');
+                    for(var i in res.list){
+                        $('tbody').append('<tr><td>'+res.list[i].title+'</td><td>'+moment(res.list[i].lendTime).format('YYYY-MM-DD')+'</td><td>'+moment(res.list[i].lendTime).add(20, 'day').format('YYYY-MM-DD')+'</td></tr>');
                     }
                     $('#reset').removeClass('hidden');
                 }
